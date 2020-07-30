@@ -12,6 +12,10 @@ h2, p, li, a {
 	font-family: $default-font;
 }
 
+a {
+	color: $hyperlink-color;
+}
+
 #navBtns {
 	display: grid;
 	grid-template-columns: 1fr min-content 1fr;
@@ -36,29 +40,34 @@ h2, p, li, a {
 }
 
 #header {
-	display: grid;
-	grid-template-columns: min-content auto;
-	justify-content: center;
-	align-items: center;
+	background-color: $header-background-color;
+	height: calc(8vh + 3.3rem);
 
-	margin-bottom: 2.4rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.4rem;
-	height: 8vh;
-	width: 100%;
+	div {
+		display: grid;
+		grid-template-columns: min-content auto;
+		justify-content: center;
+		align-items: center;
 
-	border-bottom: 1px solid $dark-grey;
+		margin-bottom: 2.4rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.4rem;
+		height: 8vh;
+		width: 100%;
 
-	h1 {
-		color: $emblem-color;
-		font-size: calc(8vh / 3);
-		line-height: 1.6;
-	}
-	img {
-		height: 100%;
-		width: auto;
-		justify-self: right;
-		margin-right: 0.5rem;
+		border-bottom: 1px solid $dark-grey;
+
+		h1 {
+			color: $emblem-color;
+			font-size: calc(8vh / 3);
+			line-height: 1.6;
+		}
+		img {
+			height: 100%;
+			width: auto;
+			justify-self: right;
+			margin-right: 0.5rem;
+		}
 	}
 }
 
@@ -161,6 +170,10 @@ h2, p, li, a {
 		margin: 0.5rem;
 		margin-top: 0;
 	}
+
+	a {
+		display: inline;
+	}
 }
 
 .content {
@@ -175,8 +188,14 @@ h2, p, li, a {
 	}
 }
 
+.inline {
+	display: inline;
+}
+
 footer {
+	background-color: $footer-background-color;
 	width: 100vw;
+	height: 2.4rem;
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
 	justify-items: center;
@@ -187,14 +206,25 @@ footer {
 		display: grid;
 		grid-template-columns: 1fr min-content 1fr;
 		justify-items: center;
-		grid-column-gap: 8px;
+		grid-column-gap: 0.5rem;
 		white-space: nowrap;
 		padding-top: 0.7rem;
 		padding-bottom: 0.5rem;
+
+		a {
+			color: $footer-link-color;
+		}
 	}
 }
 
 body {
+	background-color: $light-grey;
 	min-width: 360px;
 	overflow-x: hidden;
+}
+
+#pagewrapper {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
 }
