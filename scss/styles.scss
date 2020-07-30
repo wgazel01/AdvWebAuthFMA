@@ -1,0 +1,147 @@
+@import "fonts";
+@import "colors";
+@import "layout";
+
+h1 {
+	font-family: $brand-font;
+}
+
+h2, p, li, a {
+	font-size: $default-font-size;
+	font-family: $default-font;
+}
+
+#navBtns {
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	grid-column-gap: 0.7rem;
+	width: 78%;
+	position: absolute;
+
+	margin-left: 8%;
+	margin-right: 8%;
+	padding-top: calc(8vh + 1.4rem);
+	padding-bottom: .5rem;
+	padding-left: 3%;
+	padding-right: 3%;
+
+	border-bottom: 1px solid $light-grey;
+
+	a {
+		text-decoration: none;
+		color: desaturate($emblem-color, 20);
+	}
+	a:nth-child(1) {
+		justify-self: right;
+	}
+	a:nth-child(2) {
+		justify-self: center; 
+	}
+	a:nth-child(3) {
+		justify-self: left;
+	}
+}
+
+#header {
+	display: grid;
+	grid-template-columns: min-content auto;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 2.4rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.4rem;
+	height: 8vh;
+	width: 100%;
+
+	border-bottom: 1px solid $dark-grey;
+
+	h1 {
+		color: $emblem-color;
+		font-size: calc(8vh / 3);
+		line-height: 1.6;
+	}
+	img {
+		height: 100%;
+		width: auto;
+		justify-self: right;
+		margin-right: 0.5rem;
+	}
+}
+
+#feature {
+	background-color: $emblem-color;
+	padding: 0.5rem;
+
+	h1 {
+		padding-bottom: 0.3rem;
+		font-size: 1.7rem;
+		color: $feature-header-color;
+		@include shadow("feature");
+	}
+
+	div {
+		background-color: $content-background-color;
+		padding: 0.7rem;
+
+		h2 {
+			margin-top: 0rem;
+			margin-bottom: 0.4rem;
+			font-size: 0.9rem;
+		}
+
+		img {
+			float: left;
+			padding: 0.7rem;
+			padding-top: 0;
+			padding-left: 0;
+		}
+
+		p {
+			margin: 0;
+			font-size: 0.8rem;
+			text-align: justify;
+		}
+	}
+}
+
+#emblem_video {
+	@include content-element-style;
+
+	div {
+		display: grid;
+		justify-content: center;
+		background-color: $dark-grey;
+		width: 100%;
+	}
+	video {
+		max-width: 100%;
+	}
+}
+
+.info {
+	@include content-element-style;
+	padding: 10px;
+
+	h1 {
+		font-family: $default-font;
+		font-size: 1.4rem;
+		color: $emblem-color;
+		margin-bottom: 0.4rem;
+	}
+
+	p {
+		text-align: justify;
+		margin: 0;
+	}
+}
+
+.content {
+	background-color: $background-color;
+	display: grid;
+	justify-items: center;
+}
+
+footer {
+
+}

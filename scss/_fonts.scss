@@ -1,0 +1,22 @@
+@font-face {
+	font-family: parisr;
+	src: url(../fonts/parisr.eot) format('embedded-opentype'),
+		url(../fonts/parisr.ttf) format('truetype'),
+		url(../fonts/parisr.woff) format('woff'),
+		url(../fonts/parisr.svg) format('svg');
+}
+
+/*
+$type [string] is the type of text (1:feature 2:booksLink)
+*/
+@mixin shadow($type) {
+	@if $type == "feature" {
+		text-shadow: 2px 2px #000000;
+	} @else if $type == "booksLink" {
+		text-shadow: 0px 0px 5px #ffffff;
+	}
+}
+
+$default-font-size: 16px;
+$default-font: Helvetica;
+$brand-font: parisr;
