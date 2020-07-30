@@ -15,6 +15,7 @@ h2, p, li, a {
 	display: grid;
 	grid-template-columns: 1fr min-content 1fr;
 	grid-column-gap: 0.7rem;
+	justify-items: center;
 	width: 78%;
 	position: absolute;
 
@@ -30,15 +31,6 @@ h2, p, li, a {
 	a {
 		text-decoration: none;
 		color: desaturate($emblem-color, 20);
-	}
-	a:nth-child(1) {
-		justify-self: right;
-	}
-	a:nth-child(2) {
-		justify-self: center; 
-	}
-	a:nth-child(3) {
-		justify-self: left;
 	}
 }
 
@@ -107,11 +99,13 @@ h2, p, li, a {
 
 #emblem_video {
 	@include content-element-style;
-
+	width: calc(100% - 1rem);
 	div {
 		display: grid;
 		justify-content: center;
 		background-color: $dark-grey;
+		padding: 0;
+		margin: 0;
 		width: 100%;
 	}
 	video {
@@ -140,8 +134,30 @@ h2, p, li, a {
 	background-color: $background-color;
 	display: grid;
 	justify-items: center;
+
+	div:last-child{
+		@include content-element-style(true);
+	}
 }
 
 footer {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	justify-items: center;
 
+	div {
+		grid-column-start: 2;
+		display: grid;
+		grid-template-columns: repeat(3, min-content);
+		grid-column-gap: 8px;
+		white-space: nowrap;
+		padding-top: 0.5rem;
+		padding-bottom: 0.3rem;
+	}
+}
+
+body {
+	min-width: 360px;
+	overflow-x: hidden;
 }

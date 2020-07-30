@@ -6,6 +6,10 @@
 /*
 $type [string] is the type of text (1:feature 2:booksLink)
 */
+/*
+Applies standard styling for content elements (Excludes home feature)
+$last? [boolean] determines if element is the last element in the parent (content) div
+*/
 /* line 5, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 h1 {
   font-family: parisr;
@@ -22,6 +26,7 @@ h2, p, li, a {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-column-gap: 0.7rem;
+  justify-items: center;
   width: 78%;
   position: absolute;
   margin-left: 8%;
@@ -33,28 +38,13 @@ h2, p, li, a {
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 30, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 31, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #navBtns a {
   text-decoration: none;
   color: #315a43;
 }
 
-/* line 34, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
-#navBtns a:nth-child(1) {
-  justify-self: right;
-}
-
 /* line 37, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
-#navBtns a:nth-child(2) {
-  justify-self: center;
-}
-
-/* line 40, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
-#navBtns a:nth-child(3) {
-  justify-self: left;
-}
-
-/* line 45, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #header {
   display: grid;
   grid-template-columns: min-content auto;
@@ -68,14 +58,14 @@ h2, p, li, a {
   border-bottom: 1px solid #7a7a7a;
 }
 
-/* line 59, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 51, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #header h1 {
   color: #236841;
   font-size: calc(8vh / 3);
   line-height: 1.6;
 }
 
-/* line 64, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 56, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #header img {
   height: 100%;
   width: auto;
@@ -83,13 +73,13 @@ h2, p, li, a {
   margin-right: 0.5rem;
 }
 
-/* line 72, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 64, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature {
   background-color: #236841;
   padding: 0.5rem;
 }
 
-/* line 76, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 68, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature h1 {
   padding-bottom: 0.3rem;
   font-size: 1.7rem;
@@ -97,20 +87,20 @@ h2, p, li, a {
   text-shadow: 2px 2px #000000;
 }
 
-/* line 83, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 75, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature div {
   background-color: #ffffff;
   padding: 0.7rem;
 }
 
-/* line 87, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 79, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature div h2 {
   margin-top: 0rem;
   margin-bottom: 0.4rem;
   font-size: 0.9rem;
 }
 
-/* line 93, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 85, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature div img {
   float: left;
   padding: 0.7rem;
@@ -118,14 +108,14 @@ h2, p, li, a {
   padding-left: 0;
 }
 
-/* line 100, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 92, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature div p {
   margin: 0;
   font-size: 0.8rem;
   text-align: justify;
 }
 
-/* line 108, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 100, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #emblem_video {
   background-color: #ffffff;
   max-width: calc(100vw - 1rem);
@@ -133,22 +123,25 @@ h2, p, li, a {
   margin-bottom: 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  width: calc(100% - 1rem);
 }
 
-/* line 111, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 103, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #emblem_video div {
   display: grid;
   justify-content: center;
   background-color: #7a7a7a;
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
-/* line 117, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 111, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #emblem_video video {
   max-width: 100%;
 }
 
-/* line 122, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 116, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 .info {
   background-color: #ffffff;
   max-width: calc(100vw - 1rem);
@@ -159,7 +152,7 @@ h2, p, li, a {
   padding: 10px;
 }
 
-/* line 126, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 120, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 .info h1 {
   font-family: Helvetica;
   font-size: 1.4rem;
@@ -167,17 +160,53 @@ h2, p, li, a {
   margin-bottom: 0.4rem;
 }
 
-/* line 133, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 127, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 .info p {
   text-align: justify;
   margin: 0;
 }
 
-/* line 139, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 133, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 .content {
   background-color: #aaaaaa;
   display: grid;
   justify-items: center;
+}
+
+/* line 138, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+.content div:last-child {
+  background-color: #ffffff;
+  max-width: calc(100vw - 1rem);
+  margin: 0.5rem;
+  margin-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 143, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+footer {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  justify-items: center;
+}
+
+/* line 149, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+footer div {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-column-gap: 8px;
+  white-space: nowrap;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+}
+
+/* line 160, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+body {
+  min-width: 360px;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,16 @@
-@mixin content-element-style {
+/*
+Applies standard styling for content elements (Excludes home feature)
+$last? [boolean] determines if element is the last element in the parent (content) div
+*/
+@mixin content-element-style($last\?: false){
 	background-color: $content-background-color;
 	max-width: calc(100vw - 1rem);
 	margin: 0.5rem;
 	margin-bottom: 0;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+
+	@if $last\? == true{
+		margin-bottom: 0.5rem; 
+	}
 }
