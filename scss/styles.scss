@@ -5,6 +5,8 @@
 
 html {
 	height: 100%;
+	font-size: $default-font-size;
+	font-family: $default-font;
 }
 
 body {
@@ -20,28 +22,20 @@ h1 {
 	font-family: $brand-font;
 }
 
-h2, p, li, a {
-	font-size: $default-font-size;
-	font-family: $default-font;
-}
-
 a {
 	color: $hyperlink-color;
 }
 
 nav {
 	display: grid;
-	grid-template-columns: 1fr min-content 1fr;
+	grid-template-columns: repeat(3, min-content);
+	white-space: nowrap;
 	grid-column-gap: 0.7rem;
-	justify-items: center;
+	justify-content: center;
 	width: 78%;
 
-	margin-left: 8%;
-	margin-right: 8%;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	padding-left: 3%;
-	padding-right: 3%;
+	margin: 0 8% 0 8%;
+	padding: 0.5rem 3% 0.5rem 3%;
 
 	border-bottom: 1px solid $light-grey;
 
@@ -64,8 +58,7 @@ header {
 		justify-content: center;
 		align-items: center;
 
-		padding-top: 0.5rem;
-		padding-bottom: 0.4rem;
+		padding: 0.5rem 0 0.4rem 0;
 		height: calc(100% - 3.3rem);
 		width: 100%;
 
@@ -92,8 +85,7 @@ header {
 			height: 100%;
 			width: auto;
 			justify-self: right;
-			margin-right: 0.5rem;
-			margin-bottom: 0.3rem;
+			margin: 0 0.5rem 0.3rem 0;
 			grid-column: 1;
 			grid-row: 1;
 		}
@@ -120,32 +112,14 @@ header {
 	}
 
 	div {
-		background-color: $content-background-color;
-		margin: 0;
-		width: calc(100% - 1.4rem);
-		padding: 0.7rem;
-
-		h2 {
-			margin: 0 0 0.4rem 0;
-			font-size: 0.9rem;
-		}
-
-		img {
-			float: left;
-			padding: 0 0.7rem 0.7rem 0;
-		}
-
-		p {
-			margin: 0;
-			font-size: 0.8rem;
-			text-align: justify;
-		}
+		@include book(true);
 	}
 }
 
 #books_link {
 	@include content-element-style;
 	padding: 0;
+	margin-top: 0.5rem;
 
 	div {
 		width: calc(100% - 0.4rem);
@@ -155,13 +129,17 @@ header {
 		background-image: url($books-link-img1), url($books-link-img2);
 		background-position: left bottom, right top;
 		background-repeat: no-repeat, no-repeat;
-		background-size: 60%, 60%;
+		background-size: 40%, 40%;
 		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 		display: grid;
 		justify-items: center;
 		align-items: center;
 
 		a {
+			text-align: center;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
 			text-decoration: none;
 			font-size: 4rem;
 			font-weight: bold;
@@ -195,19 +173,12 @@ header {
 		font-family: $default-font;
 		font-size: 1.4rem;
 		color: $emblem-color;
-		margin: 0.5rem;
-		margin-left: 0.7rem;
-		margin-bottom: 0.4rem;
+		margin: 0.5rem 0.5rem 0.4rem 0.7rem;
 	}
 
 	p {
 		text-align: justify;
-		margin: 0.7rem;
-		margin-top: 0;
-	}
-
-	a {
-		display: inline;
+		margin: 0 0.7rem 0.7rem 0.7rem;
 	}
 }
 
@@ -217,14 +188,15 @@ header {
 	grid-template-columns: 1fr;
 	width: 100%;
 	justify-items: center;
-
-	div:last-child {
-		@include content-element-style(true);
-	}
+	padding-bottom: 0.5rem;
 }
 
-.inline {
-	display: inline;
+.book {
+	@include book;
+}
+
+.book-category {
+	@include book;
 }
 
 footer {
@@ -243,8 +215,7 @@ footer {
 		justify-items: center;
 		grid-column-gap: 0.5rem;
 		white-space: nowrap;
-		padding-top: 0.7rem;
-		padding-bottom: 0.5rem;
+		padding: 0.7rem 0 0.5rem 0;
 
 		a {
 			color: $footer-link-color;

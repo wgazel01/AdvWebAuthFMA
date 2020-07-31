@@ -1,16 +1,66 @@
 /*
 Applies standard styling for content elements (Excludes home feature)
-$last? [boolean] determines if element is the last element in the parent (content) div
 */
-@mixin content-element-style($last\?: false){
+@mixin content-element-style {
 	background-color: $content-background-color;
 	width: calc(100% - 1rem);
-	margin: 0.5rem;
-	margin-bottom: 0;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	margin: 0.5rem 0.5rem 0 0.5rem;
+	padding: 0.5rem 0 0.5rem 0;
+}
 
-	@if $last\? == true{
-		margin-bottom: 0.5rem; 
+/*
+Applies book styling for book elements
+$feature? [boolean] determines if element is the home feature
+*/
+@mixin book($feature\?: false) {
+	background-color: $content-background-color;
+	
+	@if $feature\? == true {
+		margin: 0;
+		width: calc(100% - 1.4rem);
+		padding: 0.7rem;
+	} @else if $feature\? == false {
+		display: grid;
+		justify-items: center;
+		margin: 0.5rem 0.5rem 0 0 0;
+		padding: 0.5rem;
+		width: calc(100% - 2rem);
+		border-top: 1px solid $light-grey;
+	}
+
+	h2 {
+		margin: 0 0 0.4rem 0;
+		font-size: 1.2rem;
+
+		@if $feature\? == false {
+			margin-top: 1rem;
+		}
+	}
+
+	img {
+		@if $feature\? == true {
+			float: left;
+			margin-right: 1rem;
+		} @else if $feature\? == false {
+			border: solid 5px lighten($emblem-color, 5%);
+			margin: 1rem 0 1rem 0;
+			padding: 0.5rem;
+			width: 60vw;
+			min-width: 100px;
+			height: 60vw;
+			max-height: 170px;
+			min-width: 100px;
+			object-fit: contain;
+		}
+	}
+
+	p {
+		margin: 0;
+		text-align: justify;
+		display: inline;
+
+		@if $feature\? == false{
+			margin-top: 0.6rem;
+		}
 	}
 }
