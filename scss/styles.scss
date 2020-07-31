@@ -3,6 +3,19 @@
 @import "layout";
 @import "images";
 
+html {
+	height: 100%;
+}
+
+body {
+	background-color: $light-grey;
+	min-height: 100%;
+	min-width: 360px;
+	overflow-x: hidden;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+}
+
 h1 {
 	font-family: $brand-font;
 }
@@ -26,7 +39,7 @@ nav {
 	margin-left: 8%;
 	margin-right: 8%;
 	padding-top: 0.5rem;
-	padding-bottom: .5rem;
+	padding-bottom: 0.5rem;
 	padding-left: 3%;
 	padding-right: 3%;
 
@@ -39,9 +52,11 @@ nav {
 }
 
 header {
-	width: 100vw;
+	width: 100%;
 	background-color: $header-background-color;
 	height: calc(8vh + 3.3rem);
+	min-height: calc(49px + 3.3rem);
+	max-height: calc(111px + 3.3rem);
 
 	div {
 		display: grid;
@@ -51,21 +66,43 @@ header {
 
 		padding-top: 0.5rem;
 		padding-bottom: 0.4rem;
-		height: 8vh;
+		height: calc(100% - 3.3rem);
 		width: 100%;
 
 		border-bottom: 1px solid $dark-grey;
+		white-space: nowrap;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			grid-column: 1 / span 2;
+			grid-row: 1;
+		}
 
 		h1 {
 			color: $emblem-color;
 			font-size: calc(8vh / 3);
 			line-height: 1.6;
+			grid-column: 2;
+			grid-row: 1;
 		}
 		img {
 			height: 100%;
 			width: auto;
 			justify-self: right;
 			margin-right: 0.5rem;
+			margin-bottom: 0.3rem;
+			grid-column: 1;
+			grid-row: 1;
+		}
+
+		/* For Landscape Mode*/
+		@media screen and (max-height: 670px) {
+			h1 {
+				font-size: 1rem;
+			}
 		}
 	}
 }
@@ -73,6 +110,7 @@ header {
 #feature {
 	background-color: $emblem-color;
 	padding: 0.5rem;
+	width: calc(100% - 1rem);
 
 	h1 {
 		padding-bottom: 0.3rem;
@@ -84,20 +122,17 @@ header {
 	div {
 		background-color: $content-background-color;
 		margin: 0;
-		width: calc(100% - 1rem);
-		padding: 0.5rem;
+		width: calc(100% - 1.4rem);
+		padding: 0.7rem;
 
 		h2 {
-			margin-top: 0rem;
-			margin-bottom: 0.4rem;
+			margin: 0 0 0.4rem 0;
 			font-size: 0.9rem;
 		}
 
 		img {
 			float: left;
-			padding: 0.7rem;
-			padding-top: 0;
-			padding-left: 0;
+			padding: 0 0.7rem 0.7rem 0;
 		}
 
 		p {
@@ -121,7 +156,7 @@ header {
 		background-position: left bottom, right top;
 		background-repeat: no-repeat, no-repeat;
 		background-size: 60%, 60%;
-		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 		display: grid;
 		justify-items: center;
 		align-items: center;
@@ -161,12 +196,13 @@ header {
 		font-size: 1.4rem;
 		color: $emblem-color;
 		margin: 0.5rem;
+		margin-left: 0.7rem;
 		margin-bottom: 0.4rem;
 	}
 
 	p {
 		text-align: justify;
-		margin: 0.5rem;
+		margin: 0.7rem;
 		margin-top: 0;
 	}
 
@@ -179,10 +215,10 @@ header {
 	background-color: $background-color;
 	display: grid;
 	grid-template-columns: 1fr;
-	width: 100vw;
+	width: 100%;
 	justify-items: center;
 
-	div:last-child{
+	div:last-child {
 		@include content-element-style(true);
 	}
 }
@@ -193,7 +229,7 @@ header {
 
 footer {
 	background-color: $footer-background-color;
-	width: 100vw;
+	width: 100%;
 	height: 2.4rem;
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
@@ -214,16 +250,4 @@ footer {
 			color: $footer-link-color;
 		}
 	}
-}
-
-body {
-	background-color: $light-grey;
-	min-width: 360px;
-	overflow-x: hidden;
-}
-
-#pagewrapper {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: min-content 1fr min-content;
 }
