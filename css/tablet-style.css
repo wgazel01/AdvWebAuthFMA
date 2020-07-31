@@ -1,0 +1,25 @@
+/* line 1, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/tablet-style.scss */
+.banner {
+  /* For Landscape Mode*/
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* line 1, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/tablet-style.scss */
+  .banner {
+    max-height: 15vh;
+  }
+  /* line 5, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/tablet-style.scss */
+  .banner img:first-child {
+    margin-top: -12vh;
+  }
+  /* line 8, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/tablet-style.scss */
+  .banner img:nth-child(2) {
+    margin-top: -5vh;
+  }
+  /* line 11, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/tablet-style.scss */
+  .banner img:nth-child(3) {
+    margin-top: -7vh;
+  }
+}
+
+/*# sourceMappingURL=tablet-style.css.map */

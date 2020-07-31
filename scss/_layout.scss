@@ -19,6 +19,7 @@ $feature? [boolean] determines if element is the home feature
 		margin: 0;
 		width: calc(100% - 1.4rem);
 		padding: 0.7rem;
+		overflow: auto;
 	} @else if $feature\? == false {
 		display: grid;
 		justify-items: center;
@@ -57,7 +58,6 @@ $feature? [boolean] determines if element is the home feature
 	p {
 		margin: 0;
 		text-align: justify;
-		display: inline;
 
 		@if $feature\? == false{
 			margin-top: 0.6rem;
