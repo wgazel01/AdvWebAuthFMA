@@ -1,4 +1,55 @@
-@media screen and (min-width: 1025px) {	
+@media screen and (min-width: 1025px) {
+	header {
+		grid-template-columns: min-content 1fr;
+		border-bottom: solid 1px $dark-grey;
+
+		div {
+			margin: 0.5rem;
+			border-bottom-style: none;
+
+			h1 {
+				font-size: calc(111px / 3);
+			}
+		}
+
+		nav {
+			border-bottom-style: none;
+			align-items: end;
+			justify-self: right;
+			margin: 0 1rem 0.5rem 0;
+		}
+	}
+
+	.info {
+		grid-column-start: span 2;
+	}
+
+	/* Home Page */
+	#home-content {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	#feature {
+		margin-top: 0.5rem;
+		width: calc(100% - 2rem);
+		grid-column: 1 / span 3;
+		grid-row: 1/ span 2;
+	}
+
+	#emblem-video {
+		grid-column-start: span 3;
+		grid-row: 1;
+	}
+
+	#books-link {
+		grid-column-start: span 3;
+	}
+	.book {
+		width: calc(100% - 1rem);
+		min-width: 340px;
+	}
+
+	/* xxth Century Books Page */
 	#catalog-content {
 		justify-self: center;
 		grid-template-columns: repeat(4, 1fr);
@@ -12,12 +63,7 @@
 		width: 100%;
 	}
 
-	.book {
-		width: calc(100% - 1rem);
-		min-width: 340px;
-	}
-
-	.banner {
+	#books-banner {
 		max-height: 15rem;
 		justify-items: center;
 
@@ -25,4 +71,5 @@
 			margin: 0;
 		}
 	}
+	
 }

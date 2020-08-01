@@ -18,6 +18,7 @@ $feature? [boolean] determines if element is the home feature
 	@if $feature\? == true {
 		margin: 0;
 		width: calc(100% - 1.4rem);
+		height: calc(100% - 3.7rem);
 		padding: 0.7rem;
 		overflow: auto;
 	} @else if $feature\? == false {

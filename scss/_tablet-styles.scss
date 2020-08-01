@@ -1,4 +1,34 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+	.info {
+		grid-column: 1/ -1;
+	}
+	
+	/* Home Page */
+	#home-content {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	#feature {
+		margin-top: 0.5rem;
+		width: calc(100% - 2rem);
+		grid-column: 1 / span 3;
+		grid-row: 1/ span 2;
+	}
+
+	#emblem-video {
+		grid-column-start: span 3;
+		grid-row: 1;
+	}
+
+	#books-link {
+		grid-column-start: span 3;
+	}
+	.book {
+		width: calc(100% - 1rem);
+		min-width: 340px;
+	}
+
+	/* xxth Century Books Page */
 	#catalog-content {
 		justify-self: center;
 		grid-template-columns: repeat(2, 1fr);
@@ -7,17 +37,7 @@
 		padding: 1rem;
 	}
 
-	#catalog-info {
-		grid-column: 1 / -1;
-		width: 100%;
-	}
-
-	.book {
-		width: calc(100% - 1rem);
-		min-width: 340px;
-	}
-
-	.banner {
+	#books-banner {
 		max-height: 10rem;
 		img:first-child {
 			margin-top: -3rem;
@@ -31,5 +51,10 @@
 			margin-top: -1rem;
 			justify-self: right;
 		}
+	}
+
+	#catalog-info {
+		grid-column: 1 / -1;
+		width: 100%;
 	}
 }

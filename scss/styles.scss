@@ -27,29 +27,11 @@ a {
 	color: $hyperlink-color;
 }
 
-nav {
-	display: grid;
-	grid-template-columns: repeat(3, min-content);
-	white-space: nowrap;
-	grid-column-gap: 0.7rem;
-	justify-content: center;
-	width: 78%;
-
-	margin: 0 8% 0 8%;
-	padding: 0.5rem 3% 0.5rem 3%;
-
-	border-bottom: 1px solid $light-grey;
-
-	a {
-		text-decoration: none;
-		color: desaturate($emblem-color, 20);
-	}
-}
-
 header {
+	display: grid;
+	justify-items: center;
 	width: 100%;
 	background-color: $header-background-color;
-	height: calc(8vh + 3.3rem);
 	min-height: calc(49px + 3.3rem);
 	max-height: calc(111px + 3.3rem);
 	z-index: 1;
@@ -60,8 +42,7 @@ header {
 		justify-content: center;
 		align-items: center;
 
-		padding: 0.5rem 0 0.4rem 0;
-		height: calc(100% - 3.3rem);
+		margin: 0.2rem 0 0.5rem 0;
 		width: 100%;
 
 		border-bottom: 1px solid $dark-grey;
@@ -97,7 +78,76 @@ header {
 			grid-row: 1;
 		}
 	}
+
+	nav {
+		display: grid;
+		grid-template-columns: repeat(3, min-content);
+		white-space: nowrap;
+		grid-column-gap: 0.7rem;
+
+		margin-bottom: 0.5rem;
+		border-bottom: 1px solid $light-grey;
+
+		a {
+			text-decoration: none;
+			color: desaturate($emblem-color, 20);
+		}
+	}
 }
+
+footer {
+	background-color: $footer-background-color;
+	width: 100%;
+	height: 2.4rem;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	justify-items: center;
+
+	div {
+		width: 100%;
+		grid-column-start: 2;
+		display: grid;
+		grid-template-columns: 1fr min-content 1fr;
+		justify-items: center;
+		grid-column-gap: 0.5rem;
+		white-space: nowrap;
+		padding: 0.7rem 0 0.5rem 0;
+
+		a {
+			color: $footer-link-color;
+		}
+	}
+}
+
+.content {
+	background-color: $background-color;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	padding-bottom: 0.5rem;
+}
+
+.book {
+	@include book;
+}
+
+.info {
+	@include content-element-style;
+
+	h1 {
+		font-family: $default-font;
+		font-size: 1.4rem;
+		color: $emblem-color;
+		margin: 0.5rem 0.5rem 0.4rem 0.7rem;
+	}
+
+	p {
+		text-align: justify;
+		margin: 0 0.7rem 0.7rem 0.7rem;
+	}
+}
+
+/* ------------------- Home Page ------------------- */
 
 #feature {
 	background-color: $emblem-color;
@@ -116,10 +166,27 @@ header {
 	}
 }
 
-#books_link {
+#emblem-video {
+	@include content-element-style;
+	width: calc(100% - 1rem);
+	div {
+		display: grid;
+		justify-content: center;
+		background-color: $dark-grey;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	video {
+		max-width: 100%;
+	}
+}
+
+#books-link {
 	@include content-element-style;
 	padding: 0;
 	margin-top: 0.5rem;
+	width: calc(100% - 1rem);
 
 	div {
 		width: calc(100% - 0.4rem);
@@ -150,55 +217,9 @@ header {
 	}
 }
 
-#emblem_video {
-	@include content-element-style;
-	width: calc(100% - 1rem);
-	div {
-		display: grid;
-		justify-content: center;
-		background-color: $dark-grey;
-		padding: 0;
-		margin: 0;
-		width: 100%;
-	}
-	video {
-		max-width: 100%;
-	}
-}
+/* ------------ xxth Century Books Page ------------ */
 
-.info {
-	@include content-element-style;
-
-	h1 {
-		font-family: $default-font;
-		font-size: 1.4rem;
-		color: $emblem-color;
-		margin: 0.5rem 0.5rem 0.4rem 0.7rem;
-	}
-
-	p {
-		text-align: justify;
-		margin: 0 0.7rem 0.7rem 0.7rem;
-	}
-}
-
-.content {
-	background-color: $background-color;
-	display: grid;
-	grid-template-columns: 1fr;
-	justify-items: center;
-	padding-bottom: 0.5rem;
-}
-
-.book {
-	@include book;
-}
-
-.book-category {
-	@include book;
-}
-
-.banner{
+#books-banner{
 	background: $dark-grey;
 	width: calc(100% - 1rem);
 	display: grid;
@@ -225,32 +246,8 @@ header {
 	}
 }
 
-.banner + div {
+#books-banner + div {
 	margin-top: 0;
-}
-
-footer {
-	background-color: $footer-background-color;
-	width: 100%;
-	height: 2.4rem;
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	justify-items: center;
-
-	div {
-		width: 100%;
-		grid-column-start: 2;
-		display: grid;
-		grid-template-columns: 1fr min-content 1fr;
-		justify-items: center;
-		grid-column-gap: 0.5rem;
-		white-space: nowrap;
-		padding: 0.7rem 0 0.5rem 0;
-
-		a {
-			color: $footer-link-color;
-		}
-	}
 }
 
 @import "tablet-styles";
