@@ -15,6 +15,7 @@ body {
 	min-width: 360px;
 	overflow-x: hidden;
 	display: grid;
+	justify-items: center;
 	grid-template-rows: min-content 1fr min-content;
 }
 
@@ -42,7 +43,8 @@ header {
 		justify-content: center;
 		align-items: center;
 
-		margin: 0.2rem 0 0.5rem 0;
+		margin: 0.5rem 0 0.2rem 0;
+		padding-bottom: 0.5rem;
 		width: 100%;
 
 		border-bottom: 1px solid $dark-grey;
@@ -69,6 +71,7 @@ header {
 				font-size: 1rem;
 			}
 		}
+
 		img {
 			height: 100%;
 			width: auto;
@@ -85,7 +88,8 @@ header {
 		white-space: nowrap;
 		grid-column-gap: 0.7rem;
 
-		margin-bottom: 0.5rem;
+		padding: 0.2rem 8% 0.2rem 8%;
+		margin-bottom: 0.3rem;
 		border-bottom: 1px solid $light-grey;
 
 		a {
@@ -93,6 +97,11 @@ header {
 			color: desaturate($emblem-color, 20);
 		}
 	}
+}
+
+main {
+	width: 100%;
+	max-width: 1920px;
 }
 
 footer {
@@ -217,7 +226,7 @@ footer {
 	}
 }
 
-/* ------------ xxth Century Books Page ------------ */
+/* ------------------ Books Page ------------------- */
 
 #books-banner{
 	background: $dark-grey;
@@ -249,6 +258,49 @@ footer {
 #books-banner + div {
 	margin-top: 0;
 }
+
+/* ----------------- Delivery Page ----------------- */
+
+table{
+	width: 90%;
+	text-align: right;
+	justify-self: center;
+	color: $table-font-color;
+	margin: 0.5rem 0 2rem 0;
+}
+
+tr {
+	background-color: lighten($emblem-color, 20%);
+}
+tr:nth-of-type(even) {
+	background-color: lighten($emblem-color, 10%);
+}
+
+th {
+	position: absolute;
+	transform: translate(100vw);
+}
+
+td { 
+	width: 100%;
+	display: grid;
+	justify-items: left;
+	grid-template-columns: 3fr 1fr;
+	border-bottom: 1px solid #eee; 
+	position: relative;
+	padding: 0.2rem 0 0.2rem 0;
+}
+
+td::before {
+	padding-left: 0.5rem;
+	justify-self: left;
+	font-family: monospace;
+	font-weight: bold;
+	color: $table-header-color;
+	white-space: pre;
+}
+@include add-headers;
+
 
 @import "tablet-styles";
 @import "desktop-styles";

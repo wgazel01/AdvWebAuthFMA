@@ -2,6 +2,7 @@
 Applies standard styling for content elements (Excludes home feature)
 */
 @mixin content-element-style {
+	display: grid;
 	background-color: $content-background-color;
 	width: calc(100% - 1rem);
 	margin: 0.5rem 0.5rem 0 0.5rem;
@@ -62,6 +63,41 @@ $feature? [boolean] determines if element is the home feature
 
 		@if $feature\? == false{
 			margin-top: 0.6rem;
+		}
+	}
+}
+
+/*
+Displays headers for Delivery Page table (mobile displays)
+*/
+@mixin add-headers {
+	@for $group from 3 through 6 {
+		tr:nth-of-type(#{$group}) {
+			@for $row from 1 through 6 {
+				$country: "        ";
+				$weight: "       ";
+				$class: "        ";
+
+				@if $row % 2 == 1 {
+					$class: "Premium";
+				} @else {
+					$class: "Standard";
+				}
+
+				@if $row == 1 {$weight: "<=1kg  ";} 
+				@if $row == 3 {$weight: ">1kg   ";}
+				@if $row == 5 {$weight: ">3kg   ";}
+
+				@if $group == 3      {$country: "UK      ";} 
+				@else if $group == 4 {$country: "Europe  ";}
+				@else if $group == 5 {$country: "USA/CA  ";}
+				@else if $group == 6 {$country: "Other   ";}
+				@if $row != 1 {$country: "        ";}
+
+				td:nth-of-type(#{$row}):before {
+					content: $country $weight $class;
+				}
+			}
 		}
 	}
 }

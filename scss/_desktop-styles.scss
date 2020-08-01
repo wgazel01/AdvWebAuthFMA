@@ -16,6 +16,7 @@
 			border-bottom-style: none;
 			align-items: end;
 			justify-self: right;
+			padding: 0;
 			margin: 0 1rem 0.5rem 0;
 		}
 	}
@@ -49,6 +50,50 @@
 		min-width: 340px;
 	}
 
+	/* Books Page */
+	#books-banner {
+		max-height: 15rem;
+		justify-items: center;
+
+		img {
+			margin: 0;
+		}
+	}
+
+	/* Delivery Page */
+	table{
+		margin: 2rem 1rem 4rem 1rem;
+		text-align: center;
+		justify-self: center;
+		color: $table-font-color;
+		font-size: 1.2rem;
+	}
+
+	th {
+		position: static;
+		transform: translate(0);
+		color: $table-header-color;
+		background-color: $emblem-color;
+		padding: 0.5rem;
+	}
+
+	td {
+		display: table-cell;
+	}
+
+	td::before {
+		content: none !important;
+	}
+
+	#uk, #europe, #us-can, #world {
+		text-align: left;
+		padding-right: 3rem;
+	}
+
+	#blank {
+		background-color: $content-background-color;
+	}
+
 	/* xxth Century Books Page */
 	#catalog-content {
 		justify-self: center;
@@ -61,15 +106,5 @@
 	#catalog-info {
 		grid-column: 1 / -1;
 		width: 100%;
-	}
-
-	#books-banner {
-		max-height: 15rem;
-		justify-items: center;
-
-		img {
-			margin: 0;
-		}
-	}
-	
+	}	
 }
