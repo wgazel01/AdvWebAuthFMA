@@ -13,7 +13,6 @@ body {
 	background-color: $light-grey;
 	min-height: 100%;
 	min-width: 360px;
-	overflow-x: hidden;
 	display: grid;
 	justify-items: center;
 	grid-template-rows: min-content 1fr min-content;
@@ -270,6 +269,7 @@ table{
 }
 
 tr {
+	white-space: nowrap;
 	background-color: lighten($emblem-color, 20%);
 }
 tr:nth-of-type(even) {
@@ -278,7 +278,7 @@ tr:nth-of-type(even) {
 
 th {
 	position: absolute;
-	transform: translate(100vw);
+	transform: translate(-100vw);
 }
 
 td { 
