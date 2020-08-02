@@ -30,9 +30,44 @@
                   <p>Please feel free to contact us if you are looking to buy a book not listed in our collection, or you are looking to sell a book, have a book values or have a book repaird. We try to answer all queries within 24 hours of receipt.<br><br>Email: <a href="#">sales@emblem-rare-books.com</a>
                   <br><br>
                   Phone: 0208 555 6789
-                  <br><br>
-                  Contact Form:
+                  <br>
                   </p>
+                  <h1>Contact Form:</h1>
+                  <form action="contact-us_submit" method="POST" accept-charset="utf-8">
+                     <fieldset id="client-details">
+                        <legend>Your Details:</legend>
+                        <label for="title">Title:</label>
+                        <select name="title" id="title">
+                           <option value="Mr">Mr</option>
+                           <option value="Mrs">Mrs</option>
+                           <option value="Miss">Miss</option>
+                           <option value="Dr">Dr</option>
+                           <option value="Mx">Mx</option>
+                        </select>
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name">
+                        <label for="surname">Surname:</label>
+                        <input type="text" name="surname" id="surname">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                     </fieldset>
+                     <fieldset id="inquiry">
+                        <legend>Inquiry:</legend>
+                        <label for="interest">Interest:</label>
+                        <select name="interests" id="interest">
+                           <option value="C20">20<sup>th</sup> Century Books</option>
+                           <option value="C19">19<sup>th</sup> Century Books</option>
+                           <option value="C18">18<sup>th</sup> Century Books</option>
+                           <option value="rare">Rare Books</option>
+                        </select>
+                        <legend class="sublegend">Are you a Dealer?</legend>
+                        <label class="radio-label"><input type="radio" name="dealer" value="dealer" id="dealer">Yes</label>
+                        <label class="radio-label"><input type="radio" name="dealer?" value="non-dealer" id="non-dealer">No</label>
+                        <legend class="sublegend">Selling or Buying?</legend>
+                        <label class="radio-label"><input type="radio" name="sell-buy" value="selling" id="selling">Selling</label>
+                        <label class="radio-label"><input type="radio" name="sell-buy" value="buying" id="buying">Buying</label>
+                     </fieldset>
+                  </form>
                </div>
             </div>
          </main>

@@ -551,6 +551,46 @@ tr:nth-of-type(6) td:nth-of-type(6):before {
   content: "        " "       " "Standard";
 }
 
+/* --------------- Contact Us Page --------------- */
+/* line 306, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+form {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-self: center;
+  width: 100%;
+}
+
+/* line 314, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+fieldset > * {
+  display: block;
+}
+
+/* line 318, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+legend {
+  font-size: 1.3rem;
+  color: #236841;
+  margin: 1rem 0 1rem 0;
+}
+
+/* line 324, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+label {
+  font-size: 1.1rem;
+}
+
+/* line 328, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+input, select {
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+/* line 332, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+.sublegend {
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   /* line 2, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
   .info {
@@ -648,6 +688,38 @@ tr:nth-of-type(6) td:nth-of-type(6):before {
   #catalog-info {
     grid-column: 1 / -1;
     width: 100%;
+  }
+  /* --------------- Contact Us Page --------------- */
+  /* line 97, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  form {
+    width: calc(100% - 1rem);
+    margin: 1rem 0 1rem 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* line 103, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  label {
+    width: 40%;
+    margin-top: 0.5rem;
+    float: left;
+  }
+  /* line 109, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  input, select {
+    width: 55%;
+  }
+  /* line 113, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  input[type=radio] {
+    width: auto;
+    margin: 0 8px 0 49%;
+  }
+  /* line 118, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  .sublegend {
+    width: 100%;
+    margin-top: 1rem;
+    float: left;
+  }
+  /* line 124, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  .radio-label {
+    display: inline-block;
   }
 }
 
@@ -761,6 +833,39 @@ tr:nth-of-type(6) td:nth-of-type(6):before {
   #catalog-info {
     grid-column: 1 / -1;
     width: 100%;
+  }
+  /* --------------- Contact Us Page --------------- */
+  /* line 113, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  form {
+    width: 800px;
+    justify-self: left;
+    margin: 1rem 0 1rem 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* line 120, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  label {
+    width: 40%;
+    margin-top: 0.5rem;
+    float: left;
+  }
+  /* line 126, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  input, select {
+    width: 55%;
+  }
+  /* line 130, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  input[type=radio] {
+    width: auto;
+    margin: 0 8px 0 49%;
+  }
+  /* line 135, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  .sublegend {
+    width: 100%;
+    margin-top: 1rem;
+    float: left;
+  }
+  /* line 141, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  .radio-label {
+    display: inline-block;
   }
 }
 

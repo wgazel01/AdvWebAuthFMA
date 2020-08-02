@@ -301,6 +301,41 @@ td::before {
 }
 @include add-headers;
 
+/* --------------- Contact Us Page --------------- */
+
+form{
+	display: grid;
+	grid-row-gap: 0.5rem;
+	margin-bottom: 1rem;
+	justify-self: center;
+	width: 100%;
+}
+
+fieldset > * {
+	display: block;
+}
+
+legend {
+	font-size: 1.3rem;
+	color: $emblem-color;
+	margin: 1rem 0 1rem 0;
+}
+
+label {
+	font-size: 1.1rem;
+}
+
+input, select {
+	margin: 0.5rem 0 1.2rem 0;
+}
+
+.sublegend {
+	font-weight: normal;
+	font-size: 1.1rem;
+	color: $font-color;
+	margin-bottom: 0;
+}
+
 
 @import "tablet-styles";
 @import "desktop-styles";
