@@ -677,7 +677,7 @@ input:invalid:focus, select:invalid:focus {
 
 /* line 409, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 .subfield {
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
   border: none;
 }
