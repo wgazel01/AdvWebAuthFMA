@@ -155,8 +155,23 @@ footer {
 	}
 }
 
+/* General Accessibility Features */
+
 :focus {
 	outline: 2px dashed $focus-color;
+}
+
+.skiplink {
+	position: absolute;
+	left: -10000px;
+}
+
+.skiplink:focus {
+	z-index: 2;
+	left: auto;
+	top: 0;
+	font-size: 2rem;
+	background-color: $skiplink-background;
 }
 
 /* ------------------- Home Page ------------------- */
