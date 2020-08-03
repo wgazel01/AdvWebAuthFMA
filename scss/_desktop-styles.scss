@@ -1,5 +1,8 @@
 @media screen and (min-width: 1025px) {
 	header {
+		-ms-grid-columns: -webkit-min-content 1fr;
+		-ms-grid-columns: min-content 1fr;
+		grid-template-columns: -webkit-min-content 1fr;
 		grid-template-columns: min-content 1fr;
 		border-bottom: solid 1px $dark-grey;
 
@@ -15,41 +18,52 @@
 		nav {
 			border-bottom-style: none;
 			align-items: end;
-			justify-self: right;
+			-ms-grid-column-align: right;
+			    justify-self: right;
 			padding: 0;
 			margin: 0 1rem 0.5rem 0;
 		}
 	}
 
 	.info {
-		grid-column-start: span 2;
+		-ms-grid-column: span 2;
+		    grid-column-start: span 2;
 	}
 
-	/* Home Page */
+	/* -------------- Home Page ------------- */
+
 	#home-content {
+		-ms-grid-columns: (1fr)[6];
 		grid-template-columns: repeat(6, 1fr);
 	}
 
 	#feature {
 		margin-top: 0.5rem;
 		width: calc(100% - 2rem);
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 3;
 		grid-column: 1 / span 3;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
 		grid-row: 1/ span 2;
 	}
 
 	#emblem-video {
-		grid-column-start: span 3;
+		-ms-grid-column: span 3;
+		    grid-column-start: span 3;
 	}
 
 	#books-link {
-		grid-column-start: span 3;
+		-ms-grid-column: span 3;
+		    grid-column-start: span 3;
 	}
 	.book {
 		width: calc(100% - 1rem);
 		min-width: 340px;
 	}
 
-	/* Books Page */
+	/* ------------ Books Page -------------- */
+
 	#books-banner {
 		max-height: 15rem;
 		justify-items: center;
@@ -59,7 +73,8 @@
 		}
 	}
 
-	/* Delivery Page */
+	/* ------------ Delivery Page ------------ */
+
 	table{
 		width: auto;
 		margin: 2rem 1rem 4rem 1rem;
@@ -70,7 +85,8 @@
 
 	th {
 		position: static;
-		transform: translate(0);
+		-webkit-transform: translate(0);
+		        transform: translate(0);
 		color: $table-header-color;
 		background-color: $emblem-color;
 		padding: 0.5rem;
@@ -93,11 +109,15 @@
 		background-color: $content-background-color;
 	}
 
-	/* xxth Century Books Page */
+	/* ---------- xxth Century Books Page --------- */
+
 	#catalog-content {
-		justify-self: center;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-row: repeat(auto-fill, min-content);
+		-ms-grid-column-align: center;
+		    justify-self: center;
+		-ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(auto-fill, -webkit-min-content);
+		grid-template-rows: repeat(auto-fill, min-content);
 		grid-gap: 1rem;
 		padding: 1rem;
 	}
@@ -111,14 +131,16 @@
 
 	form {
 		width: 800px;
-		justify-self: left;
+		-ms-grid-column-align: left;
+		    justify-self: left;
 		margin: 1rem 0 1rem 5rem;
+		-ms-grid-columns: 1fr 1fr;
 		grid-template-columns: 1fr 1fr;
 	}
 
 	label {
 		width: 40%;
-		margin-top: 0.5rem;		
+		margin-top: 0.5rem;
 		float: left;
 	}
 
@@ -133,7 +155,9 @@
 
 	input[type=submit] {
 		width: 30%;
-		justify-self: right;
+		-ms-grid-column-align: right;
+		    justify-self: right;
+		-ms-grid-column: 2;
 		grid-column: 2;
 	}
 
@@ -146,4 +170,13 @@
 	.radio-label {
 		display: inline-block;
 	}
+}.example {
+    display: -ms-grid;
+    display: grid;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: linear-gradient(to bottom, white, black);
 }

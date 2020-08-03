@@ -13,8 +13,12 @@ body {
 	background-color: $light-grey;
 	min-height: 100%;
 	min-width: 360px;
+	display: -ms-grid;
 	display: grid;
 	justify-items: center;
+	-ms-grid-rows: -webkit-min-content 1fr -webkit-min-content;
+	-ms-grid-rows: min-content 1fr min-content;
+	grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
 	grid-template-rows: min-content 1fr min-content;
 }
 
@@ -28,6 +32,7 @@ a {
 }
 
 header {
+	display: -ms-grid;
 	display: grid;
 	justify-items: center;
 	width: 100%;
@@ -37,7 +42,11 @@ header {
 	z-index: 1;
 
 	div {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: -webkit-min-content auto;
+		-ms-grid-columns: min-content auto;
+		grid-template-columns: -webkit-min-content auto;
 		grid-template-columns: min-content auto;
 		justify-content: center;
 		align-items: center;
@@ -54,7 +63,10 @@ header {
 			width: 100%;
 			height: 100%;
 			z-index: 1;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 2;
 			grid-column: 1 / span 2;
+			-ms-grid-row: 1;
 			grid-row: 1;
 		}
 
@@ -62,7 +74,9 @@ header {
 			color: $emblem-color;
 			font-size: calc(8vh / 3);
 			line-height: 1.6;
+			-ms-grid-column: 2;
 			grid-column: 2;
+			-ms-grid-row: 1;
 			grid-row: 1;
 
 			/* For Landscape Mobile */
@@ -74,15 +88,22 @@ header {
 		img {
 			height: 100%;
 			width: auto;
-			justify-self: right;
+			-ms-grid-column-align: right;
+			    justify-self: right;
 			margin: 0 0.5rem 0.3rem 0;
+			-ms-grid-column: 1;
 			grid-column: 1;
+			-ms-grid-row: 1;
 			grid-row: 1;
 		}
 	}
 
 	nav {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: -webkit-min-content 0.7rem -webkit-min-content 0.7rem -webkit-min-content;
+		-ms-grid-columns: min-content 0.7rem min-content 0.7rem min-content;
+		grid-template-columns: repeat(3, -webkit-min-content);
 		grid-template-columns: repeat(3, min-content);
 		white-space: nowrap;
 		grid-column-gap: 0.7rem;
@@ -107,14 +128,21 @@ footer {
 	background-color: $footer-background-color;
 	width: 100%;
 	height: 2.4rem;
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 1fr 0.5rem 3fr 0.5rem 1fr;
 	grid-template-columns: 1fr 3fr 1fr;
 	justify-items: center;
 
 	div {
 		width: 100%;
-		grid-column-start: 2;
+		-ms-grid-column: 2;
+		    grid-column-start: 2;
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 1fr 0.5rem -webkit-min-content 0.5rem 1fr;
+		-ms-grid-columns: 1fr 0.5rem min-content 0.5rem 1fr;
+		grid-template-columns: 1fr -webkit-min-content 1fr;
 		grid-template-columns: 1fr min-content 1fr;
 		justify-items: center;
 		grid-column-gap: 0.5rem;
@@ -129,7 +157,9 @@ footer {
 
 .content {
 	background-color: $background-color;
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 1fr;
 	grid-template-columns: 1fr;
 	justify-items: center;
 	padding-bottom: 0.5rem;
@@ -197,6 +227,7 @@ footer {
 	@include content-element-style;
 	width: calc(100% - 1rem);
 	div {
+		display: -ms-grid;
 		display: grid;
 		justify-content: center;
 		background-color: $dark-grey;
@@ -225,6 +256,7 @@ footer {
 		background-repeat: no-repeat, no-repeat;
 		background-size: 40%, 40%;
 		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+		display: -ms-grid;
 		display: grid;
 		justify-items: center;
 		align-items: center;
@@ -249,13 +281,16 @@ footer {
 #books-banner{
 	background: $dark-grey;
 	width: calc(100% - 1rem);
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: (1fr)[3];
 	grid-template-columns: repeat(3, 1fr);
 
 	img {
 		width: 100%;
 		max-width: 225px;
-		object-fit: cover;
+		-o-object-fit: cover;
+		   object-fit: cover;
 	}
 
 	/* For Landscape Mobile */
@@ -282,7 +317,8 @@ footer {
 table{
 	width: 90%;
 	text-align: right;
-	justify-self: center;
+	-ms-grid-column-align: center;
+	    justify-self: center;
 	color: $table-font-color;
 	margin: 0.5rem 0 2rem 0;
 }
@@ -297,13 +333,16 @@ tr:nth-of-type(even) {
 
 th {
 	position: absolute;
-	transform: translate(-100vw);
+	-webkit-transform: translate(-100vw);
+	        transform: translate(-100vw);
 }
 
 td { 
 	width: 100%;
+	display: -ms-grid;
 	display: grid;
 	justify-items: left;
+	-ms-grid-columns: 3fr 1fr;
 	grid-template-columns: 3fr 1fr;
 	border-bottom: 1px solid #eee; 
 	position: relative;
@@ -312,7 +351,8 @@ td {
 
 td::before {
 	padding-left: 0.5rem;
-	justify-self: left;
+	-ms-grid-column-align: left;
+	    justify-self: left;
 	font-family: monospace;
 	font-weight: bold;
 	color: $table-header-color;
@@ -323,10 +363,12 @@ td::before {
 /* --------------- Contact Us Page --------------- */
 
 form{
+	display: -ms-grid;
 	display: grid;
 	grid-row-gap: 0.5rem;
 	margin-bottom: 1rem;
-	justify-self: center;
+	-ms-grid-column-align: center;
+	    justify-self: center;
 	width: 100%;
 }
 
@@ -355,7 +397,8 @@ input, select {
 
 
 input[type=submit] {
-	justify-self: center;
+	-ms-grid-column-align: center;
+	    justify-self: center;
 	width: calc(100% - 0.4rem);
 }
 

@@ -2,7 +2,9 @@
 Applies standard styling for content elements (Excludes home feature)
 */
 @mixin content-element-style {
+	display: -ms-grid;
 	display: grid;
+	grid-auto-rows: -webkit-min-content;
 	grid-auto-rows: min-content;
 	background-color: $content-background-color;
 	width: calc(100% - 1rem);
@@ -24,9 +26,10 @@ $feature? [boolean] determines if element is the home feature
 		padding: 0.7rem;
 		overflow: auto;
 	} @else if $feature\? == false {
+		display: -ms-grid;
 		display: grid;
 		justify-items: center;
-		margin: 0.5rem 0.5rem 0 0 0;
+		margin: 0.5rem 0.5rem 0 0;
 		padding: 0.5rem;
 		width: calc(100% - 2rem);
 		border-top: 1px solid $light-grey;
@@ -54,7 +57,8 @@ $feature? [boolean] determines if element is the home feature
 			height: 60vw;
 			max-height: 170px;
 			min-width: 100px;
-			object-fit: contain;
+			-o-object-fit: contain;
+			   object-fit: contain;
 		}
 	}
 
