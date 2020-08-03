@@ -38,8 +38,8 @@
                      <fieldset id="client-details">
                         <legend>Your Details:</legend>
                         <label class="required" for="title">Title:</label>
-                        <select name="title" id="title" required minlength="1">
-                           <option value="" selected disabled></option>
+                        <select name="title" id="title" required>
+                           <option value="" selected disabled>---</option>
                            <option value="Mr">Mr</option>
                            <option value="Mrs">Mrs</option>
                            <option value="Miss">Miss</option>
@@ -57,19 +57,19 @@
                         <legend>Inquiry:</legend>
                         <label class="required" for="interest">Interest:</label>
                         <select name="interests" id="interest" required>
-                           <option value="" selected disabled></option>
+                           <option value="" selected disabled>---</option>
                            <option value="C20">20th Century Books</option>
                            <option value="C19">19th Century Books</option>
                            <option value="C18">18th Century Books</option>
                            <option value="rare">Rare Books</option>
                         </select>
                      <fieldset class="subfield">
-                        <legend class="required" class="sublegend">Are you a Dealer?</legend>
+                        <legend class="required sublegend">Are you a Dealer?</legend>
                         <label><input type="radio" name="dealer?" value="dealer" id="dealer" required>Yes</label>
                         <label><input type="radio" name="dealer?" value="non-dealer" id="non-dealer">No</label>
                      </fieldset>
                      <fieldset class="subfield">
-                        <legend class="required" class="sublegend">Selling or Buying?</legend>
+                        <legend class="required sublegend">Selling or Buying?</legend>
                         <label><input type="radio" name="sell-buy" value="selling" id="selling" required>Selling</label>
                         <label><input type="radio" name="sell-buy" value="buying" id="buying">Buying</label>
                      </fieldset>
