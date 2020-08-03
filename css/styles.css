@@ -231,15 +231,20 @@ footer div a {
   margin: 0 0.7rem 0.7rem 0.7rem;
 }
 
+/* line 158, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+:focus {
+  outline: 2px dashed #00ccff;
+}
+
 /* ------------------- Home Page ------------------- */
-/* line 160, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 164, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature {
   background-color: #236841;
   padding: 0.5rem;
   width: calc(100% - 1rem);
 }
 
-/* line 165, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 169, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature h1 {
   padding-bottom: 0.3rem;
   font-size: 1.7rem;
@@ -247,7 +252,7 @@ footer div a {
   text-shadow: 2px 2px #000000;
 }
 
-/* line 172, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 176, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #feature div {
   background-color: #ffffff;
   margin: 0;
@@ -275,7 +280,7 @@ footer div a {
   text-align: justify;
 }
 
-/* line 177, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 181, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #emblem-video {
   display: grid;
   background-color: #ffffff;
@@ -285,7 +290,7 @@ footer div a {
   width: calc(100% - 1rem);
 }
 
-/* line 180, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 184, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #emblem-video div {
   display: grid;
   justify-content: center;
@@ -295,12 +300,12 @@ footer div a {
   width: 100%;
 }
 
-/* line 188, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 192, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #emblem-video video {
   max-width: 100%;
 }
 
-/* line 193, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 197, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #books-link {
   display: grid;
   background-color: #ffffff;
@@ -312,7 +317,7 @@ footer div a {
   width: calc(100% - 1rem);
 }
 
-/* line 199, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 203, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #books-link div {
   width: calc(100% - 0.4rem);
   padding: 0;
@@ -328,7 +333,7 @@ footer div a {
   align-items: center;
 }
 
-/* line 213, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 217, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #books-link div a {
   text-align: center;
   z-index: 1;
@@ -343,7 +348,7 @@ footer div a {
 }
 
 /* ------------------ Books Page ------------------- */
-/* line 230, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 234, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #books-banner {
   background: #7a7a7a;
   width: calc(100% - 1rem);
@@ -352,7 +357,7 @@ footer div a {
   /* For Landscape Mobile */
 }
 
-/* line 236, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 240, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #books-banner img {
   width: 100%;
   max-width: 225px;
@@ -360,31 +365,31 @@ footer div a {
 }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
-  /* line 230, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+  /* line 234, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
   #books-banner {
     max-height: 5rem;
   }
-  /* line 245, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+  /* line 249, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
   #books-banner img:first-child {
     margin-top: -3rem;
   }
-  /* line 248, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+  /* line 252, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
   #books-banner img:nth-child(2) {
     margin-top: -1rem;
   }
-  /* line 251, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+  /* line 255, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
   #books-banner img:nth-child(3) {
     margin-top: -1.5rem;
   }
 }
 
-/* line 257, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 261, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 #books-banner + div {
   margin-top: 0;
 }
 
 /* ----------------- Delivery Page ----------------- */
-/* line 263, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 267, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 table {
   width: 90%;
   text-align: right;
@@ -393,24 +398,24 @@ table {
   margin: 0.5rem 0 2rem 0;
 }
 
-/* line 271, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 275, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 tr {
   white-space: nowrap;
   background-color: #3db471;
 }
 
-/* line 275, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 279, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 tr:nth-of-type(even) {
   background-color: #308e59;
 }
 
-/* line 279, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 283, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 th {
   position: absolute;
   transform: translate(-100vw);
 }
 
-/* line 284, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 288, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 td {
   width: 100%;
   display: grid;
@@ -421,7 +426,7 @@ td {
   padding: 0.2rem 0 0.2rem 0;
 }
 
-/* line 294, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 298, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 td::before {
   padding-left: 0.5rem;
   justify-self: left;
@@ -552,7 +557,7 @@ tr:nth-of-type(6) td:nth-of-type(6):before {
 }
 
 /* --------------- Contact Us Page --------------- */
-/* line 306, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 310, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 form {
   display: grid;
   grid-row-gap: 0.5rem;
@@ -561,30 +566,54 @@ form {
   width: 100%;
 }
 
-/* line 314, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 318, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 fieldset > * {
   display: block;
 }
 
-/* line 318, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 322, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 legend {
   font-size: 1.3rem;
   color: #236841;
   margin: 1rem 0 1rem 0;
 }
 
-/* line 324, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+/* line 328, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
 label {
   font-size: 1.1rem;
 }
 
-/* line 328, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
-input, select {
-  margin: 0.5rem 0 1.2rem 0;
+/* line 332, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+.required:after {
+  color: #ff0000;
+  content: " *";
 }
 
-/* line 332, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
-.sublegend {
+/* line 337, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+input, select {
+  margin: 0.5rem 0 0 0;
+}
+
+/* line 342, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+input[type=submit] {
+  justify-self: center;
+  width: calc(100% - 0.4rem);
+}
+
+/* line 347, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+input:invalid:focus, select:invalid:focus {
+  outline-color: #ff0000;
+}
+
+/* line 351, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+.subfield {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 357, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/styles.scss */
+.subfield > legend {
   font-weight: normal;
   font-size: 1.1rem;
   color: #000000;
@@ -697,27 +726,37 @@ input, select {
     grid-template-columns: 1fr 1fr;
   }
   /* line 103, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  fieldset {
+    padding: 1rem;
+  }
+  /* line 107, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
   label {
     width: 40%;
     margin-top: 0.5rem;
     float: left;
   }
-  /* line 109, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  /* line 113, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
   input, select {
     width: 55%;
   }
-  /* line 113, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  /* line 117, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
   input[type=radio] {
     width: auto;
-    margin: 0 8px 0 49%;
+    margin: 0 0.5rem 0 0;
   }
-  /* line 118, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
-  .sublegend {
+  /* line 122, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  input[type=submit] {
+    justify-self: right;
+    grid-column: 2;
+    width: 30%;
+  }
+  /* line 128, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  .subfield > legend {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
     float: left;
   }
-  /* line 124, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
+  /* line 134, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_tablet-styles.scss */
   .radio-label {
     display: inline-block;
   }
@@ -858,12 +897,18 @@ input, select {
     margin: 0 8px 0 49%;
   }
   /* line 135, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
-  .sublegend {
+  input[type=submit] {
+    width: 30%;
+    justify-self: right;
+    grid-column: 2;
+  }
+  /* line 141, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  .subfield > legend {
     width: 100%;
     margin-top: 1rem;
     float: left;
   }
-  /* line 141, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
+  /* line 147, ../../../OneDrive/University/Advanced Web Authoring/FMA/Site/scss/_desktop-styles.scss */
   .radio-label {
     display: inline-block;
   }

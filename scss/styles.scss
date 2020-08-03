@@ -155,6 +155,10 @@ footer {
 	}
 }
 
+:focus {
+	outline: 2px dashed $focus-color;
+}
+
 /* ------------------- Home Page ------------------- */
 
 #feature {
@@ -325,17 +329,37 @@ label {
 	font-size: 1.1rem;
 }
 
-input, select {
-	margin: 0.5rem 0 1.2rem 0;
+.required:after {
+	color: $required-field-color;
+	content: " *";
 }
 
-.sublegend {
+input, select {
+	margin: 0.5rem 0 0 0;
+}
+
+
+input[type=submit] {
+	justify-self: center;
+	width: calc(100% - 0.4rem);
+}
+
+input:invalid:focus, select:invalid:focus {
+	outline-color: $required-field-color;
+}
+
+.subfield {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.subfield > legend {
 	font-weight: normal;
 	font-size: 1.1rem;
 	color: $font-color;
 	margin-bottom: 0;
 }
-
 
 @import "tablet-styles";
 @import "desktop-styles";
