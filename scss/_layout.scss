@@ -3,6 +3,7 @@ Applies standard styling for content elements (Excludes home feature)
 */
 @mixin content-element-style {
 	display: grid;
+	grid-auto-rows: min-content;
 	background-color: $content-background-color;
 	width: calc(100% - 1rem);
 	margin: 0.5rem 0.5rem 0 0.5rem;
